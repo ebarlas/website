@@ -25,14 +25,16 @@
 </p>
 
 <h1>Summary</h1>
-I'm a generalist software engineer specializing in backend Java web applications deployed in AWS Cloud.
-I am a thoughtful, deliberate, hard-working developer who seeks simple, minimal, and scalable solutions
+I'm a generalist software engineer specializing in backend Java web applications deployed in AWS Cloud
+with an emphasis on customer identity, authentication, and administration.
+I regard myself as a thoughtful and deliberate developer that seeks simple and scalable solutions
 to problems. I have a record of stewarding and evolving software systems over the course of many years
-while maintaining high quality code and employing modern techniques. I enjoy a range of computer programming languages,
-paradigms, and platforms. I am endlessly curious and fascinated by topics in the field of computing, and I am constantly
-engaged in the pursuit of knowledge. In my role as tech lead, I try to cultivate an atmosphere of growth and learning
-among my colleagues. I also enjoy teaching computer programming topics to newcomers as a volunteer at the
-local CoderDojo chapter and at Santa Rosa Junior College.
+while maintaining high quality code and employing modern techniques. I am responsible for the full spectrum of
+software lifecycle stages, from specification and design to deployment, monitoring, and maintenance.
+I empower my colleagues by providing tools, libraries, and frameworks and by cultivating an atmosphere of growth,
+learning, and collaboration. I enjoy a range of programming activities including C++ game programming,
+Raspberry Pi actuator programming, mobile development, and server development. I also enjoy teaching computer
+programming topics to newcomers as a volunteer at the local CoderDojo chapter and at Santa Rosa Junior College.
 
 <h1>Skills</h1>
 <p>
@@ -42,7 +44,7 @@ local CoderDojo chapter and at Santa Rosa Junior College.
 <ul>
     <li>Languages: Java, Python, C++, C, JavaScript*, Groovy*, Clojure*</li>
     <li>Databases: Oracle, MySQL, Amazon Aurora MySQL, DynamoDB, Cassandra, Redis, Elasticsearch*</li>
-    <li>AWS: DynamoDB, S3, SNS, SQS, EC2, ECS, ELB, ASG, Lambda, Kinesis, CloudFront, CloudFormation, CloudWatch, Route53</li>
+    <li>AWS: DynamoDB, S3, SNS, SQS, EC2, ECS, ELB, ASG, RDS, KMS, Lambda, Kinesis, CloudFront, CloudFormation, CloudWatch, Route53</li>
 </ul>
 
 <h1>Experience</h1>
@@ -64,7 +66,7 @@ local CoderDojo chapter and at Santa Rosa Junior College.
     deployments, maintenance, monitoring, alerts, escalations, documentation, and client libraries.
 </p>
 <ul>
-    <li>Identity platform team lead
+    <li>Identity platform team tech lead
         <ul>
             <li>Design and implement build and deployment pipelines</li>
             <li>Govern AWS system architecture</li>
@@ -77,6 +79,8 @@ local CoderDojo chapter and at Santa Rosa Junior College.
     <li>Customer identity system
         <ul>
             <li>Distributed web application deployed in AWS Cloud backed by Aurora MySQL database</li>
+            <li>On critical path for nearly all customer interactions with products</li>
+            <li>Implements data residency</li>
             <li>Spans 3 AWS regions</li>
             <li>Billions of database records stored</li>
             <li>10s of thousands of API requests per second</li>
@@ -97,15 +101,25 @@ local CoderDojo chapter and at Santa Rosa Junior College.
             <li>Mesh of interconnected AWS Lambda Functions and databases that implement GDPR compliance</li>
             <li>Event driven data pipeline using DynamoDB streams and Kinesis streams</li>
             <li>Sends events to internal product systems for purging product-specific data</li>
-            <li>Notifies customers about impending identity records removal</li>
+            <li>Notifies customers directly about impending identity records removal</li>
             <li>Purges identity records for inactive customers</li>
         </ul>
     </li>
     <li>Screen-sharing session placement system
         <ul>
             <li>Distributed web application that assigns screen-sharing multicast responsibility to specific communication server</li>
+            <li>On critical path for all new Meeting, Webinar, and Training sessions</li>
             <li>Session assignment occurs over pool of 100s of geographically distributed communication servers</li>
             <li>Custom assignment and load balancing algorithm that prioritizes proximity while minimizing server load</li>
+        </ul>
+    </li>
+    <li>Social graph search system
+        <ul>
+            <li>Users and relationships organized into a graph modelled in Cassandra database</li>
+            <li>Custom indexes, described with scripting language, define proximity in terms of relationships</li>
+            <li>Tailored for fast typeahead search</li>
+            <li>Event driven implementation with asynchronous programming model</li>
+            <li>Powers GoToMeeting contact search</li>
         </ul>
     </li>
 </ul>
