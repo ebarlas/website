@@ -44,13 +44,13 @@ programming topics to newcomers as a volunteer at the local CoderDojo chapter an
 <ul>
     <li>Languages: Java, Python, C++, C, JavaScript*, Groovy*, Clojure*, Go*</li>
     <li>Databases: Oracle, MySQL, Amazon Aurora MySQL, DynamoDB, Cassandra, Redis*, Elasticsearch*</li>
-    <li>AWS: DynamoDB, S3, SNS, SQS, EC2, ECS, ELB, ASG, RDS, KMS, Lambda, Kinesis, CloudFront, CloudFormation, CloudWatch, Route53</li>
+    <li>AWS: DynamoDB, S3, SNS, SQS, EC2, ECS, ELB, EBS, ASG, RDS, KMS, Lambda, Kinesis, CloudFront, CloudFormation, CloudWatch, Route53</li>
 </ul>
 
 <h1>Experience</h1>
 <h2>Citrix, LogMeIn, GoTo</h2>
 <p>In February 2017, the GoTo online services division within Citrix spun off and merged with LogMeIn.</p>
-<p>In February 2022, the LogMeIn was rebranded as GoTo.</p>
+<p>In February 2022, LogMeIn was rebranded as GoTo.</p>
 <h3>Positions Held</h3>
 <p>July 2007 - Present</p>
 <ul>
@@ -71,7 +71,7 @@ programming topics to newcomers as a volunteer at the local CoderDojo chapter an
 <ul>
     <li>Identity platform team tech lead
         <ul>
-            <li>Design and implement build and deployment pipelines</li>
+            <li>Design and implement Jenkins build and deployment pipelines</li>
             <li>Govern AWS system architecture</li>
             <li>Establish standard coding conventions and testing methodologies</li>
             <li>Create tools and libraries for developers</li>
@@ -81,11 +81,11 @@ programming topics to newcomers as a volunteer at the local CoderDojo chapter an
     </li>
     <li>Customer identity system
         <ul>
-            <li>Distributed web application deployed in AWS Cloud backed by Aurora MySQL database</li>
+            <li>Distributed web application deployed in AWS Cloud backed by Amazon Aurora MySQL database</li>
             <li>On critical path for nearly all customer interactions with products</li>
-            <li>Implements data residency</li>
             <li>Spans 3 AWS regions</li>
             <li>Billions of database records stored</li>
+            <li>Single-digit millisecond processing times</li>
             <li>10s of thousands of API requests per second</li>
             <li>100s of thousands of database queries per second</li>
         </ul>
@@ -93,6 +93,8 @@ programming topics to newcomers as a volunteer at the local CoderDojo chapter an
     <li>Message queuing system
         <ul>
             <li>Distributed web application that provides remote network queue capability</li>
+            <li>Implemented from scratch, using custom append-only journal-based persistence</li>
+            <li>Built upon Amazon EBS, EC2, ECS, NLB</li>
             <li>TBs of data ingested per day</li>
             <li>Billions of discrete messages ingested per day</li>
             <li>10s of thousands of API requests per second</li>
@@ -108,17 +110,9 @@ programming topics to newcomers as a volunteer at the local CoderDojo chapter an
             <li>Purges identity records for inactive customers</li>
         </ul>
     </li>
-    <li>Screen-sharing session placement system
-        <ul>
-            <li>Distributed web application that assigns screen-sharing multicast responsibility to specific communication server</li>
-            <li>On critical path for all new Meeting, Webinar, and Training sessions</li>
-            <li>Session assignment occurs over pool of 100s of geographically distributed communication servers</li>
-            <li>Custom assignment and load balancing algorithm that prioritizes proximity while minimizing server load</li>
-        </ul>
-    </li>
     <li>Social graph search system
         <ul>
-            <li>Users and relationships organized into a graph modelled in Cassandra database</li>
+            <li>Users and relationships organized into a graph modelled in Apache Cassandra database</li>
             <li>Custom indexes, described with scripting language, define proximity in terms of relationships</li>
             <li>Tailored for fast typeahead search</li>
             <li>Event driven implementation with asynchronous programming model</li>
@@ -146,15 +140,66 @@ programming topics to newcomers as a volunteer at the local CoderDojo chapter an
     More details are available in the associated GitHub repositories.
 </p>
 <ul>
-    <li>Trippin on Tubs - 2D side-scrolling platformer game implemented in C++ targeting multiple platforms, including iOS and Android</li>
-    <li>Microhttp - fast, scalable, zero-dependency, event-driven Java web server</li>
-    <li>California Buoys and Tides - Android application in Google Play Store for tracking NOAA buoy observations and tide predictions</li>
-    <li>Petaluma Pulse - Android application in Google Play Store that displays information about Petaluma with an interactive, animated scene</li>
-    <li>Earth Moon Model - Raspberry Pi Python wood art project for displaying orbital and rotational positions of Earth and Moon in a physical model using steppers motors, hall effect sensors, and magnets</li>
-    <li>Tide Meter - Raspberry Pi Python wood and acrylic art project for illuminating WS281X LEDs to display the water level at a NOAA tide station</li>
-    <li>Wave Tracker - Raspberry Pi Python digital art project that displays buoy observation metrics on an LED matrix</li>
-    <li>Buoy Twitter Bot - Twitter bot implemented as Python AWS Lambda Function that posts hourly messages about NOAA buoy observations</li>
-    <li>Garden Explorer - Interactive Javascript Canvas application for exploring garden landscape</li>
+    <li><a href="https://github.com/ebarlas/microhttp">Microhttp</a>
+        <ul>
+            <li>Fast, scalable, zero-dependency, event-driven Java web server</li>
+            <li>MIT license</li>
+            <li>460 stars, 45 forks</li>
+            <li>Available in Maven Central repo with group and artifact ID  <code>microhttp</code></li>
+            <li>Included in industry standard TechEmpower Web Framework Benchmarks</li>
+            <li>1.8 million requests per second in latest TE plaintext benchmark continuous results</li>
+            <li>1.1 million requests per second in latest TE JSON benchmark continuous results</li>
+            <li>265 thousand requests per second in latest TE single DB query benchmark continuous results</li>
+        </ul>
+    </li>
+    <li><a href="https://github.com/ebarlas/project-loom-c5m">Project Loom C5M</a>
+        <ul>
+            <li>Achieved 5 million persistent connections between a pair of servers with Project Loom virtual threads</li>
+            <li>MIT license</li>
+            <li>331 stars, 11 forks</li>
+            <li>#1 rank on  <a href="https://news.ycombinator.com/item?id=31214253">Hacker News</a> on 4-30-2022, with 309 points and 145 comments</li>
+        </ul>
+    </li>
+    <li><a href="https://github.com/ebarlas/game-of-life-csp">Game of Life CSP</a>
+        <ul>
+            <li>Game of Life implemented in Java using virtual threads and communicating sequential processes (CSP)</li>
+            <li>MIT LIcense</li>
+            <li>116 stars, 32 forks</li>
+            <li>Featured on Inside Java podcast  <a href="https://inside.java/2022/09/20/podcast-026/">episode 26</a></li>
+        </ul>
+    </li>
+    <li><a href="https://github.com/ebarlas/TrippinOnTubs">Trippin on Tubs</a>
+        <ul>
+            <li>2D side-scrolling endless-runner platformer game implemented in C++</li>
+            <li>Targets iOS and Android mobile platforms</li>
+            <li>CMake build system</li>
+            <li>Long-term indie game dev project spanning 100s of commits and multiple years</li>
+            <li>All components, including physics engine, developed from scratch</li>
+            <li>Won <a href="https://podcasts.apple.com/us/podcast/game-dev-field-guide/id1501991718">Game Dev Field Guide</a> project-of-the-year on episode 23, December 2021</li>
+        </ul>
+    </li>
+    <li><a href="https://github.com/ebarlas/earth-moon-model">Earth Moon Model</a>
+        <ul>
+            <li>Digital art project that displays orbital and rotational positions of Earth and Moon in a physical model</li>
+            <li>Implemented in Python and runs on Raspberry Pi Zero W</li>
+            <li>Uses stepper motors, hall effect sensors, and magnets</li>
+            <li>MIT License</li>
+            <li>3D model freely available in  <a href="https://www.tinkercad.com/things/2K7GgXmbFCp">TinkerCAD</a></li>
+            <li>YouTube  <a href="https://youtu.be/LBm290BIcKk">demo video</a> demonstrates capabilities</li>
+        </ul>
+    </li>
+    <li><a href="https://play.google.com/store/apps/details?id=barlas.noaabuoysandtides&hl=en_US&gl=US&pli=1">California Buoys and Tides</a>
+        <ul>
+            <li>Android application in Google Play Store for tracking NOAA buoy observations and tide predictions</li>
+            <li>Implemented in Java using core Android SDK</li>
+        </ul>
+    </li>
+    <li><a href="https://play.google.com/store/apps/details?id=barlas.petalumariver&hl=en_US&gl=US">Petaluma Pulse</a>
+        <ul>
+            <li>Android application in Google Play Store that displays information about Petaluma with an interactive, animated scene</li>
+            <li>Implemented in Java using core Android SDK</li>
+        </ul>
+    </li>
 </ul>
 
 <h1>Teaching</h1>
